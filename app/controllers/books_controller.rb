@@ -29,15 +29,17 @@ class BooksController < ApplicationController
   def update
     @books = Book.find(params[:id])
 
-    if @books.update_attribute(book_params)
-      redirect_to "/books/:id/"
+    if @books.update_attributes(book_params)
+      redirect_to "/books/" + params[:id]
     else
       render :edit
     end
   end
 
   def destroy
-
+    @books = Book.find(params[:id])
+    @books.destroy
+    redirect_to "/books"
   end
 
   private

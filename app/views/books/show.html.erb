@@ -4,4 +4,5 @@
 <p><%= @books.url%></p>
 <p><%= @books.description %></p>
 
-<p><%= link_to "Edit Book" , edit_book_path(@books) %></p>
+<%= link_to "Edit Book" , edit_book_path(@books) %> |
+<%= link_to "Delete Book", @books, method: :delete, data: {confirm: "Do you want delete this book?"} %>
