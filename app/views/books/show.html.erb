@@ -1,0 +1,7 @@
+<p><%= link_to "Back to Home", books_url %></p>
+
+<p><%= @books.title %>, <%= @books.author %></p>
+<p><%= @books.url%></p>
+<p><%= @books.description %></p>
+
+<p><%= link_to "Edit Book" , edit_book_path(@books) %></p>

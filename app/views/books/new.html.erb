@@ -1,0 +1,15 @@
+<h1>Add a Book</h1>
+
+<%= form_for @books do |f| %>
+
+<p>Title</p>
+<p><%= f.text_field :title %></p>
+<p>Author</p>
+<p><%= f.text_field :author %></p>
+<p>Url</p>
+<p><%= f.text_field :url %></p>
+<p>Description</p>
+<p><%= f.text_field :description %></p>
+<p><%= f.submit %></p>
+
+<% end %>
